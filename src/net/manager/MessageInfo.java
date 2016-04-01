@@ -36,10 +36,21 @@ public class MessageInfo {
 		mMsgLock = new ReentrantLock();
 	}
 
+	/**
+	 * 添加消息
+	 * @param msgList
+	 * @param msg
+     */
 	private void addMsg(List<String> msgList, String msg) {
 		msgList.add(msg);
 	}
 
+	/**
+	 * 移除消息
+	 * @param msgList
+	 * @param index
+     * @return
+     */
 	private String removeMsg(List<String> msgList, int index) {
 		return msgList.remove(index);
 	}
@@ -181,6 +192,6 @@ public class MessageInfo {
 	 * @param from
 	 */
 	public void writeToFile(List<String> oldMsgList, int count, int from) {
-		// 将指定量的消息写到文件中保存
+		//TODO: 将指定量的消息写到文件中保存,未确定要保存的形式及类型...
 	}
 }

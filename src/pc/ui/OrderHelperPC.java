@@ -72,11 +72,17 @@ public class OrderHelperPC extends JFrame implements OnMessageChangedListener, O
     }
 
     private void initialData() {
+        //初始化adb连接方式
         mAdbUtils = new AdbUtils(AdbUtils.DEFAULT_ADB_PATH);
+        //创建多客户端管理对象
         mSocketMgr = new ClientSocketManager(mAdbUtils);
+        //消息管理对象
         mMsgMgr = new MessageManager();
+        //设置消息处理回调
         mMsgMgr.setOnMessageChangedListener(this);
+        //创建消息解析对象
         mIMsgParseMgrAction = new MessageParseManager();
+        //设置消息解析对象
         mIMsgParseMgrAction.setOnMsgActionListener(mMsgMgr.getOnMsgActionListener());
 
 

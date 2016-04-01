@@ -1,5 +1,4 @@
 # PCConnectToAndriod
-[TOC]
 
 ## 概述
 这是一个PC通过USB端口连接到Android的通用程序;

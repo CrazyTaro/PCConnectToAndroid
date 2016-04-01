@@ -97,7 +97,7 @@ public class MessageParseManager implements IMsgParseMgrAction {
      * @param msg
      * @return 保存当前发送的消息返回true, 否则返回false
      */
-    public boolean handleMsgSendFromServer(String deviceToken, SocketConnect connector, String msg) throws IllegalStateException {
+    protected boolean handleMsgSendFromServer(String deviceToken, SocketConnect connector, String msg) throws IllegalStateException {
         //TODO: 解析消息
         boolean isSaveMsg = true;
         return isSaveMsg;
@@ -111,7 +111,7 @@ public class MessageParseManager implements IMsgParseMgrAction {
      * @param msg
      * @return 保存当前发送的消息返回true, 否则返回false
      */
-    public boolean handleMsgSendFromClient(String deviceToken, SocketConnect connector, String msg) throws IllegalStateException {
+    protected boolean handleMsgSendFromClient(String deviceToken, SocketConnect connector, String msg) throws IllegalStateException {
         //TODO: 解析消息
         boolean isSaveMsg = true;
         return isSaveMsg;
@@ -126,7 +126,7 @@ public class MessageParseManager implements IMsgParseMgrAction {
      * @return
      * @throws IllegalStateException
      */
-    public boolean handleMsgReceiveFromClient(SocketConnect connector, String deviceToken, String msg)
+    protected boolean handleMsgReceiveFromClient(SocketConnect connector, String deviceToken, String msg)
             throws IllegalStateException {
         //TODO: 解析消息
         boolean isSaveMsg = true;
@@ -142,7 +142,7 @@ public class MessageParseManager implements IMsgParseMgrAction {
      * @return
      * @throws IllegalStateException
      */
-    public boolean handleMsgReceiveFromServer(SocketConnect connector, String deviceToken, String msg)
+    protected boolean handleMsgReceiveFromServer(SocketConnect connector, String deviceToken, String msg)
             throws IllegalStateException {
         boolean isSaveMsg = true;
         // 更新设备信息,建立连接状态

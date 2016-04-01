@@ -164,7 +164,8 @@ public class ClientSocketManager implements ISocketMgrAction {
 
     @Override
     public void setOnInfoChangedListener(String deviceToken, OnInfoChangedListener listener) {
-        for (SocketConnect socket : mClientSocketMap.values()) {
+        SocketConnect socket = getSocketByDeviceToken(deviceToken);
+        if (socket != null) {
             socket.setOnInfoChangedListener(listener);
         }
     }
